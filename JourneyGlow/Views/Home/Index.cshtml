@@ -1,0 +1,83 @@
+﻿@model JourneyGlow.Models.ViewModels.HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row align-items-center g-5 py-5">
+        <div class="col-12 col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">
+                JourneyGlow - The Travel Blog
+            </h1>
+            <p class="lead">
+                JourneyGlow is a travel blog site. Where you can share and share your travel exprience with us.
+                Join the JourneyGlow and get regular update on travel lifes.
+            </p>
+        </div>
+
+        <div class="col-12 col-lg-6">
+            <img src="https://images.pexels.com/photos/2108845/pexels-photo-2108845.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                 alt="JourneyGlow - Travel Blogs"
+                 class="d-block mx-lg-auto img-fluid"
+                 width="300" />
+        </div>
+    </div>
+</div>
+
+<!--Tags showing in home page-->
+
+<div class="container mb-5">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            @if (Model != null && Model.Tags.Any())
+            {
+                foreach (var tag in Model.Tags)
+                {
+                    <span class="badge bg-dark me-1">
+                        @tag.Name
+                    </span>
+                }
+            }
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            @if (Model != null && Model.BlogPosts.Any())
+            {
+                foreach (var blogPost in Model.BlogPosts)
+                {
+                    <div class="mb-5 bg-light box-shadow p-2">
+                        <img src="@blogPost.FeaturedImageUrl" alt="@blogPost.Heading"
+                             class="mb-2 d-block img-fluid" />
+
+                        <h2 class="mb-3"> @blogPost.Heading </h2>
+                        <p class="mb-3">
+                            Author: @blogPost.Author . Published: @blogPost.PublishedDate.ToShortDateString()
+                        </p>
+                        <p class="mb-2">
+                            @foreach (var tag in blogPost.Tags)
+                            {
+                                <span class="badge bg-secondary me-1">@tag.Name</span>
+                            }
+
+                        </p>
+                        <p class="mb-3"> @blogPost.ShortDescription</p>
+
+                        <a class="btn btn-dark"
+                           asp-area=""
+                           asp-controller="Blogs"
+                           asp-action="Index"
+                           asp-route-urlHandle="@blogPost.UrlHandle">Read More ...</a>
+                    </div>
+                }
+            }
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,50 @@
+[
+  {
+    "ContainingType": "JourneyGlow.Controllers.BlogPostLikeController",
+    "Method": "GetTotalLikesForBlog",
+    "RelativePath": "api/BlogPostLike/{blogPostId}/totalLikes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "blogPostId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JourneyGlow.Controllers.BlogPostLikeController",
+    "Method": "AddLike",
+    "RelativePath": "api/BlogPostLike/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addLikeRequest",
+        "Type": "JourneyGlow.Models.ViewModels.AddLikeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JourneyGlow.Controllers.ImagesController",
+    "Method": "UploadAsync",
+    "RelativePath": "api/Images",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
