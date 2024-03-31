@@ -1,6 +1,7 @@
 # JourneyGlow - The Travel Blog
 JourneyGlow is a travel blog platform that inspires and connects travelers worldwide. With captivating blog posts, visuals, and interactive features, it fosters a community of passionate adventurers sharing their travel experiences, tips, and insights. Built using cutting-edge technologies and user-centric design principles, it offers seamless browsing for both content creators and readers.
 
+
 **Key Features:**
  - User-Friendly Interface: Intuitive and visually appealing interface for easy navigation and content discovery.
  - Content Creation Tools: Powerful text editor and media uploading capabilities for bloggers to craft compelling stories and showcase their adventures.
@@ -9,6 +10,7 @@ JourneyGlow is a travel blog platform that inspires and connects travelers world
  - Admin Panel: Administrative functionality for managing blog posts, tags, users, and site settings efficiently.
  - Authentication and Authorization: Secure authentication and role-based authorization system to protect user data and manage access levels.
  - Responsive Design: Mobile-friendly design ensuring optimal viewing experience across devices.
+
 
 
 ## Technologies Used
